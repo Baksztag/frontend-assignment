@@ -6,5 +6,5 @@ export const SORTING_TYPES = {
 
 export const FILTER_TYPES = {
   FASHION: 'fashion',
-  SPORTS: 'sports',
+  SPORT: 'sport',
 };

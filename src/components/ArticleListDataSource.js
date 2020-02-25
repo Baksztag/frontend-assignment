@@ -2,7 +2,7 @@ import React from 'react';
 
 import useDataSource from '../hooks/useDataSource';
 
-import ArticleList from './ArticleList';
+import ArticleListManager from './ArticleListManager';
 import ErrorMessage from './ErrorMessage';
 import Loader from './Loader';
 
@@ -32,7 +32,7 @@ const ArticleListDataSource = () => {
   }
 
   return (
-    <ArticleList articles={articles} />
+    <ArticleListManager articles={articles} />
   );
 };
 

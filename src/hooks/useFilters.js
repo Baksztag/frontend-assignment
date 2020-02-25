@@ -6,7 +6,7 @@ const useFilters = () => {
   const [
     selectedFilters,
     setSelectedFilters,
-  ] = useState([FILTER_TYPES.FASHION, FILTER_TYPES.SPORTS]);
+  ] = useState([FILTER_TYPES.FASHION, FILTER_TYPES.SPORT]);
 
   const isFilterSelected = (filter) => selectedFilters.includes(filter);
 
@@ -26,7 +26,8 @@ const useFilters = () => {
   return {
     isFilterSelected,
     onFilterChange,
+    selectedFilters,
   };
 };
 
-export default useFilters();
+export default useFilters;
