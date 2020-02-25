@@ -18,7 +18,7 @@ const ArticleListDataSource = () => {
     loading: sportsLoading,
   } = useDataSource({ uri: 'http://localhost:6010/articles/sports' });
 
-  const loading = fashionLoading && sportsLoading;
+  const loading = fashionLoading || sportsLoading;
   const errorOccurred = fashionError || sportsError;
   const articles = fashionData && sportsData
     ? fashionData.articles.concat(sportsData.articles)
