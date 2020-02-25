@@ -10,10 +10,10 @@ const useSorting = () => {
       case SORTING_TYPES.NONE:
         setCurrentSorting(SORTING_TYPES.ASCENDING);
         break;
-      case SORTING_TYPES.DESCENDING:
+      case SORTING_TYPES.ASCENDING:
         setCurrentSorting(SORTING_TYPES.DESCENDING);
         break;
-      case SORTING_TYPES.ASCENDING:
+      case SORTING_TYPES.DESCENDING:
         setCurrentSorting(SORTING_TYPES.NONE);
         break;
       default:
