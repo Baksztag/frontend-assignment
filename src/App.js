@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ActionBar from './components/ActionBar';
-import ArticleList from './components/ArticleList';
+import ArticleListManager from './components/ArticleListManager';
 import DataSources from './components/DataSources';
 
 const App = () => (
@@ -9,7 +9,7 @@ const App = () => (
     <ActionBar />
     <div>
       <DataSources />
-      <ArticleList />
+      <ArticleListManager />
     </div>
   </div>
 );

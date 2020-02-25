@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const ArticleList = ({ articles }) => (
   <div>
     {articles.map((article) => (
-      <div>
+      <div key={article.id}>
         {JSON.stringify(article)}
       </div>
     ))}
