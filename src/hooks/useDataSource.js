@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function useDataSource({ uri }) {
+const useDataSource = ({ uri }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
@@ -40,6 +40,6 @@ function useDataSource({ uri }) {
     error,
     loading,
   };
-}
+};
 
 export default useDataSource;
