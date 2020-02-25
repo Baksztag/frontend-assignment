@@ -6,7 +6,7 @@ import ArticleList from './ArticleList';
 import ErrorMessage from './ErrorMessage';
 import Loader from './Loader';
 
-const ArticleListManager = () => {
+const ArticleListDataSource = () => {
   const {
     data: fashionData,
     error: fashionError,
@@ -36,4 +36,4 @@ const ArticleListManager = () => {
   );
 };
 
-export default ArticleListManager;
+export default ArticleListDataSource;
