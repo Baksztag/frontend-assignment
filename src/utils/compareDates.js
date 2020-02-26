@@ -1,3 +1,4 @@
+// TODO fix for firefox and safari
 const adaptDate = (date) => {
   const timestamp = Date.parse(date);
   if (Number.isNaN(timestamp)) {
