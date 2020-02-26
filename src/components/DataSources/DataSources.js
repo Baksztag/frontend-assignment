@@ -18,7 +18,9 @@ const DataSources = ({ isFilterSelected, onFilterChange }) => (
               checked={isFilterSelected(FILTER_TYPES.FASHION)}
               onChange={() => onFilterChange(FILTER_TYPES.FASHION)}
             />
-            Fashion
+            <span>
+              Fashion
+            </span>
           </label>
         </div>
         <div>
@@ -29,7 +31,9 @@ const DataSources = ({ isFilterSelected, onFilterChange }) => (
               checked={isFilterSelected(FILTER_TYPES.SPORT)}
               onChange={() => onFilterChange(FILTER_TYPES.SPORT)}
             />
-            Sports
+            <span>
+              Sports
+            </span>
           </label>
         </div>
       </fieldset>
