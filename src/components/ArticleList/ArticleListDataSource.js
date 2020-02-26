@@ -3,8 +3,6 @@ import React from 'react';
 import useDataSource from '../../hooks/useDataSource';
 
 import ArticleListManager from './ArticleListManager';
-import ErrorMessage from '../ErrorMessage';
-import Loader from '../Loader';
 
 const ArticleListDataSource = () => {
   const {
@@ -24,15 +22,12 @@ const ArticleListDataSource = () => {
     ? fashionData.articles.concat(sportsData.articles)
     : [];
 
-  if (loading) {
-    return (<Loader />);
-  }
-  if (errorOccurred) {
-    return (<ErrorMessage />);
-  }
-
   return (
-    <ArticleListManager articles={articles} />
+    <ArticleListManager
+      articles={articles}
+      errorOccurred={errorOccurred}
+      loading={loading}
+    />
   );
 };
 

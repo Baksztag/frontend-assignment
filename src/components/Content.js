@@ -11,7 +11,9 @@ import './Content.sass';
 const Content = ({
   articles,
   currentSorting,
+  errorOccurred,
   isFilterSelected,
+  loading,
   onCurrentSortingChange,
   onFilterChange,
 }) => (
@@ -27,6 +29,8 @@ const Content = ({
       />
       <ArticleList
         articles={articles}
+        errorOccurred={errorOccurred}
+        loading={loading}
       />
     </div>
   </div>
@@ -35,7 +39,9 @@ const Content = ({
 Content.propTypes = {
   articles: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   currentSorting: PropTypes.oneOf(Object.values(SORTING_TYPES)).isRequired,
+  errorOccurred: PropTypes.bool.isRequired,
   isFilterSelected: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
   onCurrentSortingChange: PropTypes.func.isRequired,
   onFilterChange: PropTypes.func.isRequired,
 };
