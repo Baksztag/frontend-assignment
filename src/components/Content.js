@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ActionBar from './ActionBar';
-import ArticleList from './ArticleList';
-import DataSources from './DataSources';
+import ActionBar from './ActionBar/ActionBar';
+import ArticleList from './ArticleList/ArticleList';
+import DataSources from './DataSources/DataSources';
 import { SORTING_TYPES } from '../utils/enums';
+
+import './Content.sass';
 
 const Content = ({
   articles,
@@ -13,12 +15,12 @@ const Content = ({
   onCurrentSortingChange,
   onFilterChange,
 }) => (
-  <div>
+  <div className="content-container">
     <ActionBar
       currentSorting={currentSorting}
       onCurrentSortingChange={onCurrentSortingChange}
     />
-    <div>
+    <div className="content">
       <DataSources
         isFilterSelected={isFilterSelected}
         onFilterChange={onFilterChange}

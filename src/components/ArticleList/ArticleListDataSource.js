@@ -1,10 +1,10 @@
 import React from 'react';
 
-import useDataSource from '../hooks/useDataSource';
+import useDataSource from '../../hooks/useDataSource';
 
 import ArticleListManager from './ArticleListManager';
-import ErrorMessage from './ErrorMessage';
-import Loader from './Loader';
+import ErrorMessage from '../ErrorMessage';
+import Loader from '../Loader';
 
 const ArticleListDataSource = () => {
   const {

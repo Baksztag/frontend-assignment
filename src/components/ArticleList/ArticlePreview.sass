@@ -1,0 +1,59 @@
+.article-preview
+  padding: 16px
+  margin: 16px
+  box-shadow: 1px 1px 8px #111111
+  border-radius: 8px
+  display: flex
+  background: #F5F5F6
+
+  &:first-child
+    margin-top: 0
+
+.article-preview__img
+  width: 200px
+  height: auto
+  max-height: 300px
+  margin-right: 16px
+
+.article-preview__img--none
+  min-width: 200px
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-right: 16px
+  font-style: italic
+  color: #333333
+
+.article-preview__content
+  display: flex
+  flex-direction: column
+  width: 100%
+
+  h2
+    font-size: 1.5rem
+    margin: 0
+
+.article-preview__header
+  @media all and (max-width: 768px)
+    flex-direction: column
+
+  display: flex
+  justify-content: space-between
+  margin-bottom: 32px
+  width: 100%
+
+.article-preview__preamble
+  font-size: 1rem
+
+  @media all and (max-width: 768px)
+    display: none
+
+
+.article-preview__date
+  width: 200px
+  justify-self: flex-end
+  text-align: right
+  font-size: 0.8rem
+
+  @media all and (max-width: 768px)
+    text-align: left

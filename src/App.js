@@ -1,6 +1,8 @@
 import React from 'react';
 
-import ArticleListDataSource from './components/ArticleListDataSource';
+import './App.sass';
+
+import ArticleListDataSource from './components/ArticleList/ArticleListDataSource';
 
 const App = () => (
   <ArticleListDataSource />
