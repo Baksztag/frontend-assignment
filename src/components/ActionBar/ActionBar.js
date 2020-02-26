@@ -9,18 +9,20 @@ import './ActionBar.sass';
 
 const ActionBar = ({ currentSorting, onCurrentSortingChange }) => (
   <div className="action-bar">
-    <button
-      className="action-bar__button"
-      onClick={onCurrentSortingChange}
-      type="button"
-    >
+    <div className="action-bar__content">
+      <button
+        className="action-bar__button"
+        onClick={onCurrentSortingChange}
+        type="button"
+      >
       <span>
         Sort by date
       </span>
-      {currentSorting === SORTING_TYPES.DESCENDING
-        ? (<ArrowDown />)
-        : (<ArrowUp />)}
-    </button>
+        {currentSorting === SORTING_TYPES.DESCENDING
+          ? (<ArrowDown />)
+          : (<ArrowUp />)}
+      </button>
+    </div>
   </div>
 );
 

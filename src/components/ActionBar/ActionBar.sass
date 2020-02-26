@@ -4,7 +4,14 @@
   justify-content: flex-end
   height: 32px
   background: #F5F5F6
-  box-shadow: 1px 1px 8px #111111
+  box-shadow: 1px 1px 4px #111111
+
+.action-bar__content
+  width: 100%
+  max-width: 1200px
+  margin: 0 auto
+  display: flex
+  justify-content: flex-end
 
 .action-bar__button
   border: none
@@ -16,6 +23,9 @@
   outline: none
   transition: all 0.2s
   font-size: 1.2rem
+
+  @media all and (min-width: 1200px)
+    margin: 0 16px
 
   &:hover
     cursor: pointer
