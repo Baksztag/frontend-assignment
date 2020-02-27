@@ -5,6 +5,7 @@ import Content from '../Content';
 
 import useFilters from '../../hooks/useFilters';
 import useSorting from '../../hooks/useSorting';
+import articlePropShape from '../../utils/articlePropShape';
 import compareDates from '../../utils/compareDates';
 import { SORTING_TYPES } from '../../utils/enums';
 
@@ -36,7 +37,7 @@ const ArtworkListManager = ({ articles, errorOccurred, loading }) => {
 };
 
 ArtworkListManager.propTypes = {
-  articles: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  articles: PropTypes.arrayOf(PropTypes.shape(articlePropShape)).isRequired,
   errorOccurred: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
 };

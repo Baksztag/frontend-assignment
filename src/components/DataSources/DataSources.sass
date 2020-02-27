@@ -15,3 +15,37 @@
   input
     position: absolute
     top: 2px
+
+  @media all and (max-width: 900px)
+    display: none
+
+.checkbox-wrapper
+  display: flex
+  flex-direction: column
+
+  @media all and (max-width: 900px)
+    flex-direction: row
+
+
+.data-sources--mobile
+  font-size: 1rem
+
+  fieldset
+    border: 0
+
+  legend
+    font-size: 1.2rem
+
+  label
+    position: relative
+
+    span
+      margin-left: 18px
+      margin-right: 8px
+
+  input
+    position: absolute
+    top: 0
+
+  @media all and (min-width: 900px)
+    display: none

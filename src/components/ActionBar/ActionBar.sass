@@ -6,12 +6,20 @@
   background: #F5F5F6
   box-shadow: 1px 1px 4px #111111
 
+  @media all and (max-width: 900px)
+    padding: 8px
+    height: 48px
+
 .action-bar__content
   width: 100%
   max-width: 1200px
   margin: 0 auto
   display: flex
   justify-content: flex-end
+
+  @media all and (max-width: 900px)
+    justify-content: space-between
+    align-items: flex-start
 
 .action-bar__button
   border: none

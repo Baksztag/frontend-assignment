@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import ArticlePreview from './ArticlePreview';
 import EmptyList from './EmptyList';
 
+import articlePropShape from '../../utils/articlePropShape';
+
 import './ArticleList.sass';
 
 const ArticleList = ({
@@ -34,7 +36,7 @@ const ArticleList = ({
 };
 
 ArticleList.propTypes = {
-  articles: PropTypes.arrayOf(PropTypes.shape({})),
+  articles: PropTypes.arrayOf(PropTypes.shape(articlePropShape)),
   errorOccurred: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
 };

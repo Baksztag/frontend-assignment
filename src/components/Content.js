@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import ActionBar from './ActionBar/ActionBar';
 import ArticleList from './ArticleList/ArticleList';
 import DataSources from './DataSources/DataSources';
+
+import articlePropShape from '../utils/articlePropShape';
 import { SORTING_TYPES } from '../utils/enums';
 
 import './Content.sass';
@@ -20,7 +22,9 @@ const Content = ({
   <div className="content-container">
     <ActionBar
       currentSorting={currentSorting}
+      isFilterSelected={isFilterSelected}
       onCurrentSortingChange={onCurrentSortingChange}
+      onFilterChange={onFilterChange}
     />
     <div className="content">
       <DataSources
@@ -37,7 +41,7 @@ const Content = ({
 );
 
 Content.propTypes = {
-  articles: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  articles: PropTypes.arrayOf(PropTypes.shape(articlePropShape)).isRequired,
   currentSorting: PropTypes.oneOf(Object.values(SORTING_TYPES)).isRequired,
   errorOccurred: PropTypes.bool.isRequired,
   isFilterSelected: PropTypes.func.isRequired,

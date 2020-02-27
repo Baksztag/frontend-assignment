@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import articlePropShape from '../../utils/articlePropShape';
+
 import './ArticlePreview.sass';
 
 const ArticlePreview = ({ article }) => (
@@ -20,11 +22,9 @@ const ArticlePreview = ({ article }) => (
       )}
     <div className="article-preview__content">
       <div className="article-preview__header">
-        <div>
-          <h2>
+          <h2 className="article-preview__h2">
             {article.title}
           </h2>
-        </div>
         <div className="article-preview__date">
           {article.date}
         </div>
@@ -37,7 +37,7 @@ const ArticlePreview = ({ article }) => (
 );
 
 ArticlePreview.propTypes = {
-  article: PropTypes.shape({}).isRequired,
+  article: PropTypes.shape(articlePropShape).isRequired,
 };
 
 export default ArticlePreview;

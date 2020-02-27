@@ -5,12 +5,12 @@ import { FILTER_TYPES } from '../../utils/enums';
 
 import './DataSources.sass';
 
-const DataSources = ({ isFilterSelected, onFilterChange }) => (
-  <div className="data-sources">
+const DataSources = ({ displayOnMobile, isFilterSelected, onFilterChange }) => (
+  <div className={displayOnMobile ? 'data-sources--mobile' : 'data-sources'}>
     <form>
       <fieldset>
         <legend>Data sources</legend>
-        <div>
+        <div className="checkbox-wrapper">
           <label htmlFor="fashion-data-source">
             <input
               id="fashion-data-source"
@@ -22,8 +22,6 @@ const DataSources = ({ isFilterSelected, onFilterChange }) => (
               Fashion
             </span>
           </label>
-        </div>
-        <div>
           <label htmlFor="sports-data-source">
             <input
               id="sports-data-source"
@@ -42,8 +40,12 @@ const DataSources = ({ isFilterSelected, onFilterChange }) => (
 );
 
 DataSources.propTypes = {
+  displayOnMobile: PropTypes.bool,
   isFilterSelected: PropTypes.func.isRequired,
   onFilterChange: PropTypes.func.isRequired,
+};
+DataSources.defaultProps = {
+  displayOnMobile: false,
 };
 
 export default DataSources;
