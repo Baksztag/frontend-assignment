@@ -9,20 +9,29 @@
   &:first-child
     margin-top: 0
 
+// TODO fix image ration on small screens
 .article-preview__img
   width: 200px
   height: auto
-  max-height: 300px
   margin-right: 16px
+
+  @media all and (max-width: 480px)
+    width: 100px
 
 .article-preview__img--none
   min-width: 200px
+  max-width: 200px
   display: flex
   justify-content: center
   align-items: center
   margin-right: 16px
   font-style: italic
   color: #333333
+  font-size: 1rem
+
+  @media all and (max-width: 480px)
+    min-width: 100px
+    max-width: 100px
 
 .article-preview__content
   display: flex
@@ -30,8 +39,12 @@
   width: 100%
 
 .article-preview__h2
-    font-size: 1.5rem
-    margin: 0
+  font-size: 1.5rem
+  margin: 0
+
+  @media all and (max-width: 480px)
+    font-size: 1rem
+    margin-bottom: 4px
 
 .article-preview__header
   display: flex
