@@ -8,7 +8,7 @@ const EmptyList = ({
 }) => {
   let text = '';
   if (noArticles) text = 'No articles available';
-  if (errorOccurred) text = 'Something went wrong. Please refresh the page or try again later';
+  if (errorOccurred) text = 'Something went wrong. Please refresh the page or try again later.';
   if (loading) text = 'Loading articles';
 
   return (
